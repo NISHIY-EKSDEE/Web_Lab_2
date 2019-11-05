@@ -89,11 +89,11 @@
       <td class="input">
         <table>
           <tr>
-            <td><input type="checkbox" class="R" name="R" value="1"><label>1</label></td>
-            <td><input type="checkbox" class="R" name="R" value="2"><label>2</label></td>
-            <td><input type="checkbox" class="R" name="R" value="3"><label>3</label></td>
-            <td><input type="checkbox" class="R" name="R" value="4"><label>4</label></td>
-            <td><input type="checkbox" class="R" name="R" value="5"><label>5</label></td>
+            <td><input id="cb_R_1" type="checkbox" class="R" name="R" value="1"><label>1</label></td>
+            <td><input id="cb_R_2" type="checkbox" class="R" name="R" value="2"><label>2</label></td>
+            <td><input id="cb_R_3" type="checkbox" class="R" name="R" value="3"><label>3</label></td>
+            <td><input id="cb_R_4" type="checkbox" class="R" name="R" value="4"><label>4</label></td>
+            <td><input id="cb_R_5" type="checkbox" class="R" name="R" value="5"><label>5</label></td>
           </tr>
           <tr>
             <td id="wrongR" colspan="5"></td>

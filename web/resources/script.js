@@ -4,6 +4,23 @@ var isROkay = false;
 var canvas = document.querySelector("canvas");
 var cx = canvas.getContext("2d");
 
+$(document).ready(function() {
+    $(window).onload(saveSettings);
+        loadSettings();
+});
+
+function loadSettings() {
+    let Rs = document.getElementsByClassName("R");
+    for(let i = 0; i < Rs.length; i++)
+        Rs[i].checked = localStorage[Rs[i].id];
+}
+
+function saveSettings(){
+    let Rs = document.getElementsByClassName("R");
+    for(let i = 0; i < Rs.length; i++)
+        localStorage[Rs[i].id] = Rs[i].checked
+}
+
 checkX();
 checkY();
 checkR();
