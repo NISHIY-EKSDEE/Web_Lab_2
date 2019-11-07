@@ -14,8 +14,19 @@ button					{height: 40px}
 #wrongX, #wrongR			{height: 27px; width: 500px; color: red; font-size: 18px}
 #tdUnderMap                 {color: red; font-size: 18px}
 #wrongY			            {height: 48px; width: 500px; color: red; font-size: 18px}
-#historyTable > tr {border: 1px solid black}
+#historyTable > tr {border: 1px solid black;}
 .results {border: 1px solid black}
+#page-wraper{margin: 0 auto; width: 1400px}
+#floatTip {position: absolute;
+    width: 175px; /* Ширина блока */
+    display: none; /* Прячем от показа */
+    border: 1px solid #000; /* Параметры рамки */
+    opacity: 0.4;
+    padding: 5px; /* Поля вокруг текста */
+    font-family: sans-serif; /* Рубленый шрифт */
+    font-size: 9pt; /* Размер шрифта */
+    color: #333; /* Цвет текста */
+    background: #ECF5E4; /* Цвет фона */}
 @font-face {
     font-family: "Marker Felt Wide";
     src: url("./fonts/MarkerFelt-Wide_0.otf") format("truetype");

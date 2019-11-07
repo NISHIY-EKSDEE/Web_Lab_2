@@ -10,7 +10,7 @@
 <% Point point = (Point) request.getAttribute("point"); %>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="resources/mainStyles.css">
+    <link rel="stylesheet" type="text/css" href="resources/glavstil.css">
     <title>Title</title>
 </head>
 <body>

@@ -24,7 +24,8 @@ public class ControllerServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        if(req.getParameter("type").equals("check-points"))
+        if(req.getParameter("type") != null
+                && req.getParameter("type").equals("check-point"))
             req.getRequestDispatcher("areaCheck").forward(req, resp);
         else req.getRequestDispatcher("index.jsp").forward(req, resp);
     }

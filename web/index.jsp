@@ -1,6 +1,5 @@
 <%@ page import="model.Point" %>
-<%@ page import="java.util.List" %>
-<%@ page import="java.util.Collections" %><%--
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: nishiy
   Date: 15.10.2019
@@ -12,12 +11,13 @@
 <html>
 <head>
   <jsp:useBean id="history" class="bean.History" scope="session" />
-  <link rel="stylesheet" type="text/css" href="resources/mainStyles.css">
+  <link rel="stylesheet" type="text/css" href="resources/glavstil.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Основная страница</title>
 </head>
 <body>
+<div id="page-wraper">
 <table>
   <tr>
     <td colspan="2">
@@ -117,20 +117,23 @@
     <input type="hidden" id="hiddenR" name="R" value="">
   </form>
 </table>
+<div id="floatTip"></div>
 <table id="historyTable">
   <%
     List<Point> list = history.getResults();
     if(list.size() > 0)%>
   <tr id="tableHeaders"><th>Координата X</th><th>Координата Y</th><th>Радиус R</th><th>Результат</th></tr>
-    <%Collections.reverse(list);
-    for(Point p : list){%>
+    <% for(int i = 0; i < list.size(); i++){
+          Point p = list.get(i);%>
   <tr><td class="historyX"><%=p.getX()%></td>
     <td class="historyY"><%=p.getY()%></td>
     <td class="historyR"><%=p.getR()%></td>
     <td class="historyResults"><%=p.getResult()%></td></tr>
-   <% }
-  %>
+   <% } %>
 </table>
-<script type="text/javascript" src="resources/script.js"></script>
+</div>
+<script type="text/javascript" src="resources/big_brain.js"></script>
+<script type="text/javascript" src="resources/drawing.js"></script>
+<script type="text/javascript" src="resources/listeners.js"></script>
 </body>
 </html>
