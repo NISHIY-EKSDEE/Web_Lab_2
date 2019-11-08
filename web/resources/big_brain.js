@@ -2,32 +2,6 @@ var isXOkay = false;
 var isYOkay = false;
 var isROkay = false;
 
-function loadRValues(){
-    let Rs = document.getElementsByClassName("R");
-    for(let i = 0; i < Rs.length; i++) {
-        let result = getSavedValue(Rs[i].id);
-        if(result) {
-            Rs[i].click();
-        }else{
-            Rs[i].checked = result;
-        }
-    }
-}
-
-function saveRValues(){
-    let Rs = document.getElementsByClassName("R")
-    for(let i = 0; i < Rs.length; i++)
-    {
-        let id = Rs[i].id;  // get the sender's id to save it .
-        let val = Rs[i].checked; // get the value.
-        localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override .
-    }
-}
-
-function getSavedValue(v) {
-    return localStorage.getItem(v) == "true";
-}
-
 function checkX(){
     let btns = document.getElementsByClassName("X");
     if(this.checked){

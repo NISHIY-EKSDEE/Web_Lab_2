@@ -22,7 +22,7 @@ public class AreaCheckServlet extends HttpServlet {
             History bean = (History) session.getAttribute("history");
             bean.addPoint(point);
             req.setAttribute("point", point);
-            req.getRequestDispatcher("check_result.jsp").forward(req, resp);
+            req.getRequestDispatcher("check_result.jsp").forward(req, resp  );
         }catch(NumberFormatException e) {
             req.getRequestDispatcher("index.jsp").forward(req, resp);
         }

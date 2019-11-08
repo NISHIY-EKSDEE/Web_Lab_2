@@ -24,7 +24,7 @@ for(i = 0; i < btns.length; i++){
 }
 
 btns = document.getElementsByClassName("R");
-for(i = 0; i < btns.length; i++){
+for(let i = 0; i < btns.length; i++){
     btns[i].onchange = checkR;
 }
 
@@ -64,8 +64,38 @@ function moveFloatTip(posX, posY){
     floatTipStyle.top = posY;
 }
 
+function loadRValues(){
+    let Rs = document.getElementsByClassName("R");
+    for(let i = 0; i < Rs.length; i++) {
+        let result = getSavedValue(Rs[i].id);
+        if(result) {
+            $('cb_R_' + (i+1)).click();
+            $('cb_R_' + (i+1)).checked = true;
+            isROkay = true;
+        }else{
+            Rs[i].checked = result;
+        }
+    }
+    checkX();
+    checkY();
+    draw();
+}
+
+function saveRValues(){
+    let Rs = document.getElementsByClassName("R")
+    for(let i = 0; i < Rs.length; i++)
+    {
+        let id = Rs[i].id;  // get the sender's id to save it .
+        let val = Rs[i].checked; // get the value.
+        localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override .
+    }
+}
+
+function getSavedValue(v) {
+    return localStorage.getItem(v) == "true";
+}
+
 loadRValues();
-checkX();
-checkY();
+
 
 

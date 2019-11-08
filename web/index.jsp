@@ -10,6 +10,7 @@
 <% System.out.println("entered index.jsp");%>
 <html>
 <head>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
   <jsp:useBean id="history" class="bean.History" scope="session" />
   <link rel="stylesheet" type="text/css" href="resources/glavstil.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
